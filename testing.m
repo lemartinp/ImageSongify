@@ -13,10 +13,10 @@ F1 = addSignal(300,ts,100,F1);
 tss =0:0.001:length(F1)*(1/1000);
 tss(length(tss)-1) =[];
 
-txt = [];
-txt(length(txt)+1)=543534;
+txt = {'fdsaf','fdsafds','gfdgdf'};
+txt(length(txt)+1) = {'hello'};
 disp(txt)
 
 hold on;
 plot(tss,F1,'b')
-sound(F1);
+%sound(F1);
