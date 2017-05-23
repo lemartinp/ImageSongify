@@ -22,7 +22,7 @@ function varargout = UI(varargin)
 
 % Edit the above text to modify the response to help UI
 
-% Last Modified by GUIDE v2.5 23-May-2017 14:12:03
+% Last Modified by GUIDE v2.5 23-May-2017 15:18:28
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -76,5 +76,12 @@ varargout{1} = handles.output;
 % --- Executes on button press in upImgBtn.
 function upImgBtn_Callback(hObject, eventdata, handles)
 % hObject    handle to upImgBtn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in soundBtn.
+function soundBtn_Callback(hObject, eventdata, handles)
+% hObject    handle to soundBtn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
