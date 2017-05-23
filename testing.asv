@@ -14,7 +14,7 @@ tss =0:0.001:length(F1)*(1/1000);
 tss(length(tss)-1) =[];
 
 txt = [];
-txt(length(txt)+1)=543534;
+txt = [txt,'ffdsdf'];
 disp(txt)
 
 hold on;
