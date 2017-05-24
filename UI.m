@@ -81,6 +81,7 @@ function upImgBtn_Callback(hObject, eventdata, handles)
 [filename, pathname] = uigetfile({'*.*';'*.png';'*.jpg'},'Choose the Image to Upload');
 img = imread([pathname, filename]);
 imshow(img,'Parent',handles.imageAxes);
+set(handles.imgToSoundBtn,'Enable','on');
 
 
 % --- Executes on button press in soundBtn.
@@ -95,4 +96,7 @@ function imgToSoundBtn_Callback(hObject, eventdata, handles)
 % hObject    handle to imgToSoundBtn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-plot(0:0.0001:2*pi,sin(x),'r');
+axes(handles.plotAxes);
+plot(sin(0:.1:1));
+grid;
+set(handles.soundBtn,'Enable','on');
