@@ -22,7 +22,7 @@ function varargout = UI(varargin)
 
 % Edit the above text to modify the response to help UI
 
-% Last Modified by GUIDE v2.5 23-May-2017 15:18:28
+% Last Modified by GUIDE v2.5 24-May-2017 06:14:07
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -78,6 +78,7 @@ function upImgBtn_Callback(hObject, eventdata, handles)
 % hObject    handle to upImgBtn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+[filename, pathname] = uigetfile({'*.*';'*.png';'*.jpg'},'File Selector');
 
 
 % --- Executes on button press in soundBtn.
@@ -85,3 +86,11 @@ function soundBtn_Callback(hObject, eventdata, handles)
 % hObject    handle to soundBtn (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in imgToSoundBtn.
+function imgToSoundBtn_Callback(hObject, eventdata, handles)
+% hObject    handle to imgToSoundBtn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+plot(0:0.0001:2*pi,sin(x),'r');
