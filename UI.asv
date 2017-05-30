@@ -76,13 +76,10 @@ varargout{1} = handles.output;
 % --- Executes on button press in upImgBtn.
 function upImgBtn_Callback(hObject, eventdata, handles)
     global img
-    
-    cla(handles.imageAxes,'reset');
-    cla(handles.plotAxes,'reset');
+
     [filename, pathname] = uigetfile({'*.*';'*.png';'*.jpg'},'Choose the Image to Upload');
     img = imread([pathname, filename]);
     imshow(img,'Parent',handles.imageAxes);
-    
     set(handles.imgToSoundBtn,'Enable','on');
 
 % --- Executes on button press in soundBtn.
@@ -90,10 +87,21 @@ function soundBtn_Callback(hObject, eventdata, handles)
     global signal
     global fs
     global player
+    global flag
 
     player = audioplayer(signal, fs);
-    play(player);
+    if flag
+        disp('yeah Im in play flag before');
+        flag = false;
+        resume(player);
+        disp('yeah Im in play flag after');
+    else
+        disp('yeah Im in play before');
+        play(player);
+        disp('yeah Im in play after');
+    end
 
+    set(handles.pauseBtn,'Enable','on');
     set(handles.stopBtn,'Enable','on');
 
 % --- Executes on button press in stopBtn.
@@ -102,9 +110,22 @@ function stopBtn_Callback(hObject, eventdata, handles)
     
     stop(player);
     
+    set(handles.pauseBtn,'Enable','off');
     set(handles.stopBtn,'Enable','off');
     set(handles.soundBtn,'Enable','on');
     
+% --- Executes on button press in stopBtn.
+function pauseBtn_Callback(hObject, eventdata, handles)
+    global player
+    global flag
+    
+    pause(player);
+    flag = true;
+    
+    set(handles.pauseBtn,'Enable','off');
+    set(handles.stopBtn,'Enable','off');
+    set(handles.soundBtn,'Enable','on');
+
 % --- Executes on button press in saveBtn.
 function saveBtn_Callback(hObject, eventdata, handles)
     global signal
@@ -112,15 +133,16 @@ function saveBtn_Callback(hObject, eventdata, handles)
    
     [file,path] = uiputfile({'*.wav'},'Save song');
     audiowrite([path, file],signal,fs);
-    msgbox(['Your ImageSongify has been saved at ',path,file],'File saved');
+    msgbox('The Image conver','File saved')
     
+
 % --- Executes on button press in imgToSoundBtn.
 function imgToSoundBtn_Callback(hObject, eventdata, handles)
     global img
     global signal
     global fs
     
-    cla(handles.plotAxes, 'reset');
+    reset(handles.plotAxes);
     frecuency = get(handles.Fs,'String');
     fs = str2double(frecuency);
     axes(handles.plotAxes);
@@ -128,8 +150,8 @@ function imgToSoundBtn_Callback(hObject, eventdata, handles)
     tss = 0:0.001:length(signal)*(1/1000);
     tss(length(tss)-1)=[];
     plot(tss, signal, 'r');
-    grid;
     
     set(handles.soundBtn,'Enable','on');
     set(handles.saveBtn,'Enable','on');
     set(handles.stopBtn,'Enable','off');
+    set(handles.pauseBtn,'Enable','off');
