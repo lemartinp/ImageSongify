@@ -6,12 +6,8 @@ clc;
 [y,Fs] = audioread('src/chords/C#min7.wav');
 [y1] = audioread('src/chords/Dm highest.wav');
 [y2] = audioread('src/chords/Amin7.wav');
-[y3] = audioread('src/chords/Dm highest.wav');
-
-signal = [];
-signal = [signal(1:length(signal),:);y(1:50000,:)];
-signal = [signal(1:length(signal),:);y2(1:50000,:)];
-signal = [signal(1:length(signal),:);y3(1:50000,:)];
+signal = [y(1:50000,:);y1(1:50000,:)];
+signal = [signal(1:50000,:);y2(1:50000,:)];
 
 plot(signal);
 sound(signal,Fs);

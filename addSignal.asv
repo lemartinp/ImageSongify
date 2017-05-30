@@ -87,13 +87,11 @@ function signal = addSignal(chord,ts,signal)
         signal = [signal(1:length(signal),:);y(1:50000,:)];
         wl = 46.62;
     elseif strcmp(chord,'G+')
-        
-        [y,f1] = audioread('src/chords/major G.wav');
-        signal = [signal(1:length(signal),:);y(1:50000,:)];
+        f1 = 1567.98;
         wl = 22.00;
     end
     
-    %F1 = wl*sin(f1*ts*pi);
-    %signal = [signal, F1];
+    F1 = wl*sin(f1*ts*pi);
+    signal = [signal, F1];
 end
 
