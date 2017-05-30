@@ -1,19 +1,13 @@
 function signal = signalizer(image)
     A = double(image);
     signal = [];
-%     x = 2;
+    x = 2;
     txt = ['ImageSongify log:\n','\n'];
-    
-    rows = length(A(:,1,1));
-    cols = length(A);
-    r_step = round(rows/60);
-    c_step = round(cols/60);
-    
-    W = mean(A(1:r_step:rows,1:c_step:cols,:));
-%     while x < length(A)
-        R = W(:,:,1);
-        G = W(:,:,2);
-        B = W(:,:,3);
+
+    %while x < length(A)
+        R = A(:,x,1);
+        G = A(:,x,2);
+        B = A(:,x,3);
 
         ts = 0:0.001:1;
         ts(length(ts)-1) =[];
@@ -171,8 +165,8 @@ function signal = signalizer(image)
             end
             i = i + 1;
         end
-%         x = x + 1;
-%     end
+        x = x + 1;
+    end
     fileID = fopen('log.txt','w');
     fprintf(fileID,txt);
 end
