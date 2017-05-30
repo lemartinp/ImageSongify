@@ -14,12 +14,16 @@ F1 = addSignal(300,ts,100,F1);
 tss =0:0.001:length(F1)*(1/1000);
 tss(length(tss)-1)=[];
 
-image  = imread('Doggo.jpg');
+image  = imread('Perro-Cachorro.jpg');
 
-signal = signalizer(image);
+signal = signalizer(image, 8192);
 tss = 0:0.001:length(signal)*(1/1000);
 tss(length(tss)-1)=[];
 plot(tss, signal, 'r');
+
+dlmwrite('log.txt','1 not so bluere');
+dlmwrite('log.txt','2 not so blue');
+dlmwrite('log.txt','3 not so blue');
 
 %txt = {'fdsaf','fdsafds','gfdgdf'};
 %txt(length(txt)+1) = {'hello'};

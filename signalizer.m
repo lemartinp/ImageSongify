@@ -3,18 +3,17 @@ function signal = signalizer(image, fs)
 
     Fs = fs;
     signal = [];
-
     x = 2;
+    txt = ['ImageSongify log:\n','\n'];
 
     while x < length(A)
         R = A(:,x,1);
-        G = A(:,x,2);   
+        G = A(:,x,2);
         B = A(:,x,3);
 
         ts = 0:0.001:1;
         ts(length(ts)-1) =[];
 
-        txt = {};
         i = 1;
         while i < length(R)
             red = R(i);
@@ -22,120 +21,147 @@ function signal = signalizer(image, fs)
             blue = B(i);
 
             if (red > 191)
-                txt(length(txt)+1) = {'reddish'};
+                txt = [txt, 'reddish\n'];
                 if (green > 191)
-                    txt(length(txt)+1) = {'greenish'};
+                    txt = [txt,'greenish\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('C+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('F+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(466,ts,585,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('G+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 elseif (green < 191) && (green > 63)
-                    txt(length(txt)+1) = {'kinda green'};
+                    txt = [txt,'kinda green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('A-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('A+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(440,ts,620,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('Bb+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 else
-                    txt(length(txt)+1) = {'not so green'};
+                    txt = [txt,'not so green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
-                        signal = addSignal(523.25,ts,1,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('Db+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
-                        signal = addSignal(554.37,ts,1,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('C-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(415,ts,657,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('B+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 end
             elseif (red < 191) && (red > 63)
-                txt(length(txt)+1) = {'kinda red'};
+                txt = [txt,'kinda red\n'];
                 if (green > 191)
-                    txt(length(txt)+1) = {'greenish'};
+                    txt = [txt,'greenish\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('A+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('Eb+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(494,ts,552,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('B-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 elseif (green < 191) && (green > 63)
-                    txt(length(txt)+1) = {'kinda green'};
+                    txt = [txt,'kinda green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('C+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('Bb-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('D#-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 else
-                    txt(length(txt)+1) = {'not so green'};
+                    txt = [txt,'not so green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
-                        signal = addSignal(659,ts,414,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('Db+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
-                        signal = addSignal(698,ts,390,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('F-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(370,ts,737,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('Ab+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 end
             else
-                txt(length(txt)+1) = {'not so red'};
+                txt = [txt,'not so red\n'];
                 if (green > 191)
-                    txt(length(txt)+1) = {'greenish'};
+                    txt = [txt,'greenish\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
-                        signal = addSignal(554,ts,492,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('A+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
-                        signal = addSignal(5,ts,1,signal);
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('F#-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
-                        signal = addSignal(523,ts,521,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('B-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 elseif (green < 191) && (green > 63)
-                    txt(length(txt)+1) = {'kinda green'};
+                    txt = [txt,'kinda green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
-                        signal = addSignal(587,ts,464,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('F+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('F-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('D-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 else
-                    txt(length(txt)+1) = {'not so green'};
+                    txt = [txt,'not so green\n'];
                     if (blue > 191)
-                        txt(length(txt)+1) = {'blueish'};
-                        signal = addSignal(622,ts,438,signal);
-                        txt(length(txt)+1) = {'signal added'};
+                        txt = [txt,'blueish\n'];
+                        signal = addSignal('C+',ts,signal);
+                        txt = [txt,'signal added\n'];
                     elseif (blue < 191) && (blue > 63)
-                        txt(length(txt)+1) = {'kinda blue'};
+                        txt = [txt,'kinda blue\n'];
+                        signal = addSignal('Ab-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     else
-                        txt(length(txt)+1) = {'not so blue'};
+                        txt = [txt,'not so blue\n'];
+                        signal = addSignal('D#-',ts,signal);
+                        txt = [txt,'signal added\n'];
                     end
                 end
             end
@@ -143,5 +169,7 @@ function signal = signalizer(image, fs)
         end
         x = x + 1;
     end
-    
+    fileID = fopen('log.txt','w');
+    fprintf(fileID,txt);
+    disp('updated log');
 end
