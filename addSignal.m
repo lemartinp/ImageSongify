@@ -55,7 +55,7 @@ function signal = addSignal(chord,ts,signal)
         wl = 22.00;
     end
     
-    F1 = wl*sin(f1*ts*2*pi);
+    F1 = wl*sin(f1*ts*pi);
     signal = [signal, F1];
 end
 
