@@ -83,7 +83,7 @@ function imgToSoundBtn_Callback(hObject, eventdata, handles)
     frecuency = get(handles.Fs,'String');
     fs = str2double(frecuency);
     axes(handles.plotAxes);
-    signal = signalizer(img, fs);
+    signal = signalizer(img);
     tss = 0:0.001:length(signal)*(1/1000);
     tss(length(tss)-1)=[];
     plot(tss, signal, 'r');

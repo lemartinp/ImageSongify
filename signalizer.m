@@ -1,7 +1,6 @@
-function signal = signalizer(image, fs)
+function signal = signalizer(image)
     A = double(image);
 
-    Fs = fs;
     signal = [];
     x = 2;
     txt = ['ImageSongify log:\n','\n'];
@@ -171,5 +170,4 @@ function signal = signalizer(image, fs)
     end
     fileID = fopen('log.txt','w');
     fprintf(fileID,txt);
-    disp('updated log');
 end
