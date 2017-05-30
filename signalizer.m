@@ -7,27 +7,21 @@ function signal = signalizer(image, fs)
     x = 2;
 
     while x < length(A)
-        %B = A(:);
         R = A(:,x,1);
         G = A(:,x,2);   
         B = A(:,x,3);
-
 
         ts = 0:0.001:1;
         ts(length(ts)-1) =[];
 
         txt = {};
-        %image(X);
         i = 1;
-
         while i < length(R)
-
             red = R(i);
             green = G(i);
             blue = B(i);
 
             if (red > 191)
-
                 txt(length(txt)+1) = {'reddish'};
                 if (green > 191)
                     txt(length(txt)+1) = {'greenish'};
@@ -149,4 +143,5 @@ function signal = signalizer(image, fs)
         end
         x = x + 1;
     end
+    
 end
