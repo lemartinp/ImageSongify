@@ -1,28 +1,220 @@
 ImageSongify log:
 
-kinda red
+not so red
+kinda green
+blueish
+signal added
+not so red
+kinda green
+blueish
+signal added
+not so red
+kinda green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
 kinda green
 kinda blue
 signal added
 kinda red
 kinda green
+blueish
+signal added
+not so red
+kinda green
+kinda blue
+signal added
+not so red
+kinda green
+kinda blue
+signal added
+not so red
+kinda green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
+not so green
+kinda blue
+signal added
+not so red
+not so green
 kinda blue
 signal added
 kinda red
+not so green
+kinda blue
+signal added
+not so red
+not so green
+not so blue
+signal added
+not so red
+not so green
+not so blue
+signal added
+reddish
 kinda green
 kinda blue
 signal added
 kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+kinda blue
+signal added
+kinda red
+not so green
+kinda blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+kinda blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+kinda blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+reddish
+not so green
+kinda blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+reddish
 kinda green
 kinda blue
 signal added
 kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+not so red
+not so green
+not so blue
+signal added
+reddish
+not so green
+not so blue
+signal added
+not so red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+kinda red
+not so green
+not so blue
+signal added
+reddish
 kinda green
-kinda blue
+not so blue
+signal added
+reddish
+kinda green
+not so blue
+signal added
+reddish
+kinda green
+not so blue
+signal added
+reddish
+kinda green
+not so blue
+signal added
+reddish
+greenish
+not so blue
+signal added
+reddish
+kinda green
+not so blue
+signal added
+reddish
+greenish
+not so blue
+signal added
+reddish
+greenish
+not so blue
+signal added
+reddish
+greenish
+not so blue
 signal added
 kinda red
 kinda green
-kinda blue
+not so blue
+signal added
+reddish
+greenish
+not so blue
+signal added
+kinda red
+greenish
+not so blue
 signal added
 kinda red
 greenish
@@ -30,93 +222,25 @@ kinda blue
 signal added
 kinda red
 greenish
-kinda blue
+not so blue
 signal added
 kinda red
 greenish
 kinda blue
 signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
-kinda green
-kinda blue
-signal added
-kinda red
+not so red
 kinda green
 not so blue
 signal added
-kinda red
+not so red
 kinda green
 not so blue
 signal added
-kinda red
-kinda green
-not so blue
+not so red
+greenish
+kinda blue
 signal added
-kinda red
-kinda green
+not so red
+not so green
 not so blue
 signal added
